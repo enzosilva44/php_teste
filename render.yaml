@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: meu-backend-php
+    env: php
+    plan: free
+    buildCommand: ""
+    startCommand: php -S 0.0.0.0:$PORT -t public
+    healthCheckPath: /
+    envVars:
+      - key: ENVIRONMENT
+        value: production
